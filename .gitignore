@@ -18,6 +18,8 @@ yarn-debug.log*
 yarn-error.log*
 # local env files
 .env*.local
+# local state directories
+.local/
 # vercel
 .vercel
 # typescript

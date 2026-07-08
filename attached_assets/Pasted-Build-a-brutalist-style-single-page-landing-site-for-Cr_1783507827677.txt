@@ -1,0 +1,33 @@
+Build a brutalist-style single-page landing site for "CraftedSnippets Co.," a web design/development studio. Founder: Aditya Singh.
+
+DESIGN SYSTEM
+- Color palette (use exactly, no substitutions):
+  - Rust/amber: #7A4900 (primary — buttons, section dividers, accent blocks)
+  - Dark brown: #513827 (headings, borders, footer background)
+  - Cream: #EEE8DF (alternating section background)
+  - White: #FFFFFF (base background)
+  - Near-black: #1A1208 for high-contrast text on cream/white
+- Brutalist aesthetic: thick black/dark-brown borders (2-4px) on every card and section, raw hard-edged rectangles (no soft rounded corners except the logo mark), oversized bold uppercase headings (use a strong grotesk/sans like "Archivo Black" or "Space Grotesk" from Google Fonts), asymmetric grid layouts, visible structural lines separating sections like the source document's contents/agreement pages, deliberately "unpolished" but intentional spacing — think exposed grid, raw HTML aesthetic elevated with precision.
+- Textures: add subtle grain/noise overlay (CSS background-image with a noise SVG data-URI or canvas-generated static) at low opacity (~4-6%) over rust and dark-brown blocks so they don't look flat. Add a faint halftone dot pattern option for hero background.
+- Logo: recreate a simple radiating 4-pointed starburst/asterisk mark (matches "CraftedSnippets Co." logo) in dark brown/rust, used in nav and loading screen.
+
+LOADING SCREEN
+- Full-viewport loading screen shown on initial load, background dark brown (#513827), the starburst logo mark centered, animated with a slow rotation or pulsing/drawing-in stroke animation (SVG stroke-dashoffset animation), "CraftedSnippets Co." wordmark fading in below it, then the whole screen wipes/slides away (clip-path or transform) to reveal the hero. Respect prefers-reduced-motion by cutting straight to a simple fade.
+
+SECTIONS (in order)
+1. Nav — logo mark + "CraftedSnippets Co." wordmark left, right-aligned links (Work, Process, About, Contact) plus a bold bordered "Let's Talk" button that scrolls to the reach-out form. Sticky, with a thick bottom border.
+2. Hero — huge uppercase headline (something like "WEBSITES THAT LOOK LIKE THEY MEAN BUSINESS"), one-line subhead about building clean, fast, mobile-first sites for local businesses (cafés, salons, restaurants, small stores), a bordered CTA button linking to the contact form. No pricing mentioned anywhere. Add a decorative textured rust block or grid pattern behind the headline.
+3. About — short bio block styled like a stamped card with thick border, using the "I help local businesses build clean, modern, easy-to-use websites..." positioning language, founder photo placeholder in a hard-edged bordered frame (not circular).
+4. Process — recreate the horizontal step-flow from the onboarding doc (Onboarding & Requirements → Structure & Layout → Design Preview & Feedback → Development & Content Setup → Final Review & Delivery) as interactive bordered blocks in a connected chain with arrow connectors; make each step block have a hover state that inverts colors (rust becomes background, cream becomes text) and slightly lifts/shifts on hover for interactivity.
+5. What's Included — bullet-style feature grid (Modern responsive design, Mobile-friendly, Menu/services sections, Contact forms, Google Maps integration, Basic SEO setup, Fast-loading optimization) as bordered cards in a brutalist grid, each with a small icon, hover-tilt or hover-invert effect. Do not include any prices, packages, or numbers tied to cost.
+6. FAQ — accordion styled with thick borders, plus-to-cross rotate icon on expand, using the FAQ content style from the doc but reworded generically (timeline, content requirements, mobile support, post-launch updates) — no payment-percentage details.
+7. Reach Out / Contact — a bold bordered contact form (Name, Email, Business Type, Project Details textarea, Submit button) styled as a raw brutalist "form card" with thick borders and offset drop-shadow (hard shadow, not blurred), plus WhatsApp/email direct links as secondary contact options. Add simple client-side validation and a success-state message after submit.
+8. Footer — dark brown background, logo mark, copyright, WhatsApp/email/social links, thick top border matching nav.
+
+INTERACTIVITY
+- Buttons and cards should have hard-edged hover states: offset shadow that shifts on hover (shadow moves as if the element is pressing down), border-color inversion, or a slight rotate (1-2deg) on hover — nothing soft or overly smooth, keep it snappy (150-200ms ease-out).
+- Scroll-reveal on section entry (elements slide/fade in from a hard offset, not a soft fade).
+- Respect prefers-reduced-motion throughout — disable transforms/rotations and use simple opacity fades instead.
+
+TECH
+- Single-file React component, Tailwind CSS only (no external UI libraries), fully responsive mobile-first, no lorem ipsum — use the real copy/content described above.

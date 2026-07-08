@@ -39,7 +39,7 @@ const Footer = () => {
             </h4>
             <nav className="flex flex-col gap-3 font-bold uppercase text-sm">
               <a href="#" className="hover:text-background transition-colors w-fit">Instagram</a>
-              <a href="#" className="hover:text-background transition-colors w-fit">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/patialapapi03" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors w-fit">LinkedIn</a>
               <a href="#" className="hover:text-background transition-colors w-fit">WhatsApp</a>
             </nav>
           </div>

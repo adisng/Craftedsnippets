@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import adityaPhoto from '@assets/portfolio.png';
 
 const About = () => {
   return (
@@ -21,7 +22,7 @@ const About = () => {
             {/* Image container */}
             <div className="relative bg-background border-[4px] border-border aspect-[3/4] overflow-hidden group">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" 
+                src={adityaPhoto} 
                 alt="Aditya Singh"
                 className="w-full h-full object-cover filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500"
               />

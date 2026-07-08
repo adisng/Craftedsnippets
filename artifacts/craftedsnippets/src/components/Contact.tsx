@@ -40,11 +40,11 @@ const Contact = () => {
                 Direct Lines
               </h3>
               <a 
-                href="mailto:hello@craftedsnippets.co" 
+                href="mailto:singh09aaditya@gmail.com" 
                 className="flex items-center gap-4 group p-4 border-[3px] border-border bg-background text-foreground hover:bg-accent hover:-translate-y-1 hover:shadow-[4px_4px_0px_hsl(var(--border))] transition-all"
               >
                 <Mail className="w-6 h-6 group-hover:text-primary transition-colors" />
-                <span className="font-bold uppercase tracking-wide">hello@craftedsnippets.co</span>
+                <span className="font-bold uppercase tracking-wide">singh09aaditya@gmail.com</span>
               </a>
               <a 
                 href="#" 

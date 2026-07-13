@@ -41,28 +41,18 @@ export function Footer() {
             <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-cream/50">Reach</h2>
             <ul className="mt-5 flex flex-col gap-3 font-mono text-xs uppercase tracking-[0.15em]">
               <li>
-                <a href="mailto:hello@craftedsnippets.co" className="link-underline hover:text-paper">
-                  hello@craftedsnippets.co
+                <a href="mailto:craftedsnippets@gmail.in" className="link-underline hover:text-paper">
+                  craftedsnippets@gmail.in
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/910000000000"
+                  href="https://wa.me/919981795553"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link-underline hover:text-paper"
                 >
                   WhatsApp
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-underline hover:text-paper"
-                >
-                  Instagram
                 </a>
               </li>
             </ul>

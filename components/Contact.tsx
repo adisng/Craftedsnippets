@@ -20,6 +20,7 @@ export function Contact() {
     const data = new FormData(form)
     const name = String(data.get('name') ?? '').trim()
     const email = String(data.get('email') ?? '').trim()
+    const business = String(data.get('business') ?? '').trim()
     const message = String(data.get('message') ?? '').trim()
 
     const nextErrors: Record<string, string> = {}
@@ -31,10 +32,36 @@ export function Contact() {
     setErrors(nextErrors)
     if (Object.keys(nextErrors).length > 0) return
 
-    // Client-side simulated submit — no backend by design.
-    // TODO: wire to /app/api/contact/route.ts when a real endpoint is wanted.
     setStatus('submitting')
-    window.setTimeout(() => setStatus('success'), 1200)
+
+    const mailtoEmail = 'craftedsnippets@gmail.in'
+    const subject = encodeURIComponent(`New Project Inquiry - ${name}`)
+    const body = encodeURIComponent(
+`Hi CraftedSnippets Co.,
+
+A new project inquiry has been submitted:
+
+=========================================
+PROJECT INTAKE SHEET
+=========================================
+Full Name:     ${name}
+Email:         ${email}
+Business Type: ${business || 'Not specified'}
+
+Project Details:
+-----------------------------------------
+${message}
+=========================================
+
+Sent via CraftedSnippets Co. contact form.`
+    )
+
+    const mailtoUrl = `mailto:${mailtoEmail}?subject=${subject}&body=${body}`
+
+    window.setTimeout(() => {
+      window.location.href = mailtoUrl
+      setStatus('success')
+    }, 800)
   }
 
   return (
@@ -57,28 +84,18 @@ export function Contact() {
               </p>
               <ul className="mt-10 flex flex-col gap-4 font-mono text-sm uppercase tracking-[0.15em]">
                 <li>
-                  <a href="mailto:hello@craftedsnippets.co" className="link-underline text-ink hover:text-rust">
-                    hello@craftedsnippets.co
+                  <a href="mailto:craftedsnippets@gmail.in" className="link-underline text-ink hover:text-rust">
+                    craftedsnippets@gmail.in
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://wa.me/910000000000"
+                    href="https://wa.me/919981795553"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="link-underline text-ink hover:text-rust"
                   >
                     WhatsApp — Chat directly
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link-underline text-ink hover:text-rust"
-                  >
-                    Instagram — @craftedsnippets
                   </a>
                 </li>
               </ul>

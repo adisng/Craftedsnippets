@@ -41,8 +41,8 @@ export function Footer() {
             <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-cream/50">Reach</h2>
             <ul className="mt-5 flex flex-col gap-3 font-mono text-xs uppercase tracking-[0.15em]">
               <li>
-                <a href="mailto:craftedsnippets@gmail.in" className="link-underline hover:text-paper">
-                  craftedsnippets@gmail.in
+                <a href="mailto:craftedsnippets@gmail.com" className="link-underline hover:text-paper">
+                  craftedsnippets@gmail.com
                 </a>
               </li>
               <li>

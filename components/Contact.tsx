@@ -34,7 +34,7 @@ export function Contact() {
 
     setStatus('submitting')
 
-    const mailtoEmail = 'craftedsnippets@gmail.in'
+    const mailtoEmail = 'craftedsnippets@gmail.com'
     const subject = encodeURIComponent(`New Project Inquiry - ${name}`)
     const body = encodeURIComponent(
 `Hi CraftedSnippets Co.,
@@ -84,8 +84,8 @@ Sent via CraftedSnippets Co. contact form.`
               </p>
               <ul className="mt-10 flex flex-col gap-4 font-mono text-sm uppercase tracking-[0.15em]">
                 <li>
-                  <a href="mailto:craftedsnippets@gmail.in" className="link-underline text-ink hover:text-rust">
-                    craftedsnippets@gmail.in
+                  <a href="mailto:craftedsnippets@gmail.com" className="link-underline text-ink hover:text-rust">
+                    craftedsnippets@gmail.com
                   </a>
                 </li>
                 <li>
